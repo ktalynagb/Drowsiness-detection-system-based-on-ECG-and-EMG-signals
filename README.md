@@ -12,10 +12,23 @@ El sistema integra múltiples módulos de instrumentación biomédica:
 - **Módulo de Estimulación**: genera un estímulo muscular basado en PWM como retroalimentación correctiva.
 - **Visualización**: muestra las bioseñales en una computadora o interfaz de adquisición.
 
+## Interfaz en Python
+
+La interfaz en Python forma parte del sistema de monitoreo biomédico que integra EMG (electromiografía superficial) y ECG para evaluar estados fisiológicos relacionados con la somnolencia y la actividad cardíaca.
+
+El programa:
+- **Adquiere datos en tiempo real mediante conexión serial (Arduino–Python).**
+- **Muestra gráficos dinámicos de EMG, ECG y señales derivadas.**
+- **Realiza clasificación automática de estados fisiológicos basada en umbrales.**
+- **Detecta y registra eventos de estimulación eléctrica.**
+- **Calcula frecuencia cardíaca y amplitud EMG para determinar seis estados (Somnolencia, Bradicardia, EMG bajo, Vigilia, Taquicardia y Alerta).**
+- **Genera reportes PDF automáticos con análisis de tendencias y registros de sesión.**
+- **Esta interfaz complementa el módulo de adquisición en Arduino para conformar una plataforma completa de monitoreo y estimulación EMG–ECG, orientada a la investigación neurofisiológica y aplicaciones clínicas.**
+
 ## Componentes principales
 - SP32 Mini
 - Amplificadores de instrumentación (INA128 / AD620)
-- Filtros pasa banda activos (0,5–30 Hz)
+- Filtros pasa banda activos y digitales
 - Circuito de estimulación basado en PWM
 - Electrodos de superficie
 
